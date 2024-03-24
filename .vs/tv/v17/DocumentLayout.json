@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\tv\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|tv\\tv.csproj|d:\\programacion\\visualstudio.net\\c#\\opengl\\tv\\tv\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|tv\\tv.csproj|solutionrelative:tv\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|tv\\tv.csproj|d:\\programacion\\visualstudio.net\\c#\\opengl\\tv\\tv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|tv\\tv.csproj|solutionrelative:tv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Game.cs",
+              "DocumentMoniker": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\tv\\tv\\Game.cs",
+              "RelativeDocumentMoniker": "tv\\Game.cs",
+              "ToolTip": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\tv\\tv\\Game.cs",
+              "RelativeToolTip": "tv\\Game.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAYwBAAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T02:17:15.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\tv\\tv\\Program.cs",
+              "RelativeDocumentMoniker": "tv\\Program.cs",
+              "ToolTip": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\tv\\tv\\Program.cs",
+              "RelativeToolTip": "tv\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T02:17:03.867Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

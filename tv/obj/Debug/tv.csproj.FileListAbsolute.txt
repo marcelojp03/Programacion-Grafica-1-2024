@@ -1,0 +1,11 @@
+D:\Programacion\VisualStudio.net\c#\OpenGL\tv\tv\bin\Debug\tv.exe.config
+D:\Programacion\VisualStudio.net\c#\OpenGL\tv\tv\bin\Debug\tv.exe
+D:\Programacion\VisualStudio.net\c#\OpenGL\tv\tv\bin\Debug\tv.pdb
+D:\Programacion\VisualStudio.net\c#\OpenGL\tv\tv\bin\Debug\OpenTK.dll
+D:\Programacion\VisualStudio.net\c#\OpenGL\tv\tv\bin\Debug\OpenTK.pdb
+D:\Programacion\VisualStudio.net\c#\OpenGL\tv\tv\bin\Debug\OpenTK.xml
+D:\Programacion\VisualStudio.net\c#\OpenGL\tv\tv\obj\Debug\tv.csproj.AssemblyReference.cache
+D:\Programacion\VisualStudio.net\c#\OpenGL\tv\tv\obj\Debug\tv.csproj.CoreCompileInputs.cache
+D:\Programacion\VisualStudio.net\c#\OpenGL\tv\tv\obj\Debug\tv.csproj.Up2Date
+D:\Programacion\VisualStudio.net\c#\OpenGL\tv\tv\obj\Debug\tv.exe
+D:\Programacion\VisualStudio.net\c#\OpenGL\tv\tv\obj\Debug\tv.pdb
