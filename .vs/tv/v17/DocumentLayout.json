@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\tv\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|tv\\tv.csproj|d:\\programacion\\visualstudio.net\\c#\\opengl\\tv\\tv\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|tv\\tv.csproj|solutionrelative:tv\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|tv\\tv.csproj|d:\\programacion\\visualstudio.net\\c#\\opengl\\tv\\tv\\televisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|tv\\tv.csproj|solutionrelative:tv\\televisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|tv\\tv.csproj|d:\\programacion\\visualstudio.net\\c#\\opengl\\tv\\tv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|tv\\tv.csproj|D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\tv\\tv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|tv\\tv.csproj|solutionrelative:tv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|tv\\tv.csproj|d:\\programacion\\visualstudio.net\\c#\\opengl\\tv\\tv\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|tv\\tv.csproj|solutionrelative:tv\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,12 +27,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Televisor.cs",
+              "DocumentMoniker": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\tv\\tv\\Televisor.cs",
+              "RelativeDocumentMoniker": "tv\\Televisor.cs",
+              "ToolTip": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\tv\\tv\\Televisor.cs",
+              "RelativeToolTip": "tv\\Televisor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T11:33:24.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Game.cs",
               "DocumentMoniker": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\tv\\tv\\Game.cs",
               "RelativeDocumentMoniker": "tv\\Game.cs",
               "ToolTip": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\tv\\tv\\Game.cs",
               "RelativeToolTip": "tv\\Game.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAYwBAAAAAjAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAFkAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-24T02:17:15.011Z",
               "EditorCaption": ""
@@ -41,7 +58,7 @@
               "RelativeDocumentMoniker": "tv\\Program.cs",
               "ToolTip": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\tv\\tv\\Program.cs",
               "RelativeToolTip": "tv\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAYAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-24T02:17:03.867Z",
               "EditorCaption": ""

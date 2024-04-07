@@ -13,7 +13,7 @@ namespace tv
         {
             using(Game game= new Game())
             {
-                game.Run(60.0);
+                game.Run();
             }
         }
     }
