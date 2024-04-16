@@ -1,0 +1,243 @@
+{
+  "Centro": { "x": 0.0, "y": 0.0, "z": 0.0 },
+  "Partes":[
+    {
+    "Poligonos": [
+        {
+          "Nombre": "Cara Frontal Televisor",
+          "Tipo": "Cuadrado",
+          "Vertices": [
+            {"x": -0.5, "y": -0.3, "z": 0.1},
+            {"x": 0.5, "y": -0.3, "z": 0.1},
+            {"x": 0.5, "y": 0.3, "z": 0.1},
+            {"x": -0.5, "y": 0.3, "z": 0.1}          
+          ],
+          "Color":{"R":105,"G":105,"B":105,"A":255}
+        },
+        {
+          "Nombre": "Cara Trasera Televisor",
+          "Tipo": "Cuadrado",
+          "Vertices": [
+            {"x": -0.5, "y": -0.3, "z": -0.1},
+            {"x": 0.5, "y": -0.3, "z": -0.1},
+            {"x": 0.5, "y": 0.3, "z": -0.1},
+            {"x": -0.5, "y": 0.3, "z": -0.1}
+          ],
+          "Color":{"R":105,"G":105,"B":105,"A":255}
+        },
+        {
+          "Nombre": "Cara Lateral Izquierdo Televisor",
+          "Tipo": "Cuadrado",
+          "Vertices": [
+            {"x": -0.5, "y": -0.3, "z": 0.1},
+            {"x": -0.5, "y": -0.3, "z": -0.1},
+            {"x": -0.5, "y": 0.3, "z": -0.1},
+            {"x": -0.5, "y": 0.3, "z": 0.1}
+          ],
+          "Color":{"R":105,"G":105,"B":105,"A":255}
+        },
+        {
+          "Nombre": "Cara Lateral Derecho Televisor",
+          "Tipo": "Cuadrado",
+          "Vertices": [
+            {"x": 0.5, "y": -0.3, "z": 0.1},
+            {"x": 0.5, "y": -0.3, "z": -0.1},
+            {"x": 0.5, "y": 0.3, "z": -0.1},
+            {"x": 0.5, "y": 0.3, "z": 0.1}
+          ],
+          "Color":{"R":105,"G":105,"B":105,"A":255}
+        },
+        {
+          "Nombre": "Cara Superior Televisor",
+          "Tipo": "Cuadrado",
+          "Vertices": [
+            {"x": -0.5, "y": 0.3, "z": 0.1},
+            {"x": 0.5, "y": 0.3, "z": 0.1},
+            {"x": 0.5, "y": 0.3, "z": -0.1},
+            {"x": -0.5, "y": 0.3, "z": -0.1}
+          ],
+          "Color":{"R":105,"G":105,"B":105,"A":255}
+        },
+        {
+          "Nombre": "Cara Superior Televisor",
+          "Tipo": "Cuadrado",
+          "Vertices": [
+          
+            {"x": -0.5, "y": -0.3, "z": 0.1},
+            {"x": 0.5, "y": -0.3, "z": 0.1},
+            {"x": 0.5, "y": -0.3, "z": -0.1},
+            {"x": -0.5, "y": -0.3, "z": -0.1}
+          ],
+          "Color":{"R":105,"G":105,"B":105,"A":255}
+        } 
+      ]
+    },
+    {
+      "Poligonos": [
+        {
+          "Nombre": "Pantalla Televisor",
+          "Tipo": "Cuadrado",
+          "Vertices": [
+            {"x": -0.48, "y": -0.28, "z": 0.125},
+            {"x": 0.48, "y": -0.28, "z": 0.125},
+            {"x": 0.48, "y": 0.28, "z": 0.125},
+            {"x": -0.48, "y": 0.28, "z": 0.125}
+          ],
+          "Color": {"R":0,"G":0,"B":0,"A":255}
+        }
+      ]
+    },
+    {
+      "Poligonos": [
+        {
+        "Nombre": "Cara Frontal Pata Izquierda",
+        "Tipo": "Cuadrado",
+        "Vertices": [
+          {"x": -0.5, "y": -0.3, "z": 0.1},
+          {"x": -0.5, "y": -0.4, "z": 0.1},
+          {"x": -0.4, "y": -0.4, "z": 0.1},
+          {"x": -0.4, "y": -0.3, "z": 0.1}
+          
+        ],
+          "Color":{"R":128,"G":128,"B":128,"A":255}
+        },
+        {
+          "Nombre": "Cara Frontal Pata Derecha",
+          "Tipo": "Cuadrado",
+          "Vertices": [           
+              {"x": 0.5, "y": -0.3, "z": 0.1},
+              {"x": 0.5, "y": -0.4, "z": 0.1},
+              {"x": 0.4, "y": -0.4, "z": 0.1},
+              {"x": 0.4, "y": -0.3, "z": 0.1}         
+          ],
+          "Color":{"R":128,"G":128,"B":128,"A":255}
+        },
+        {
+          "Nombre": "Cara Trasera Pata Izquierda",
+          "Tipo": "Cuadrado",
+          "Vertices": [           
+              {"x": -0.5, "y": -0.3, "z": -0.1},
+              {"x": -0.5, "y": -0.4, "z": -0.1},
+              {"x": -0.4, "y": -0.4, "z": -0.1},
+              {"x": -0.4, "y": -0.3, "z": -0.1}        
+          ],
+          "Color":{"R":128,"G":128,"B":128,"A":255}
+        },
+        {
+          "Nombre": "Cara Trasera Pata Derecha",
+          "Tipo": "Cuadrado",
+          "Vertices": [           
+              {"x": 0.5, "y": -0.3, "z": -0.1},
+              {"x": 0.5, "y": -0.4, "z": -0.1},
+              {"x": 0.4, "y": -0.4, "z": -0.1},
+              {"x": 0.4, "y": -0.3, "z": -0.1}    
+          ],
+          "Color":{"R":128,"G":128,"B":128,"A":255}
+        },
+        {
+          "Nombre": "Cara Lateral Izquierdo Pata Izquierda",
+          "Tipo": "Cuadrado",
+          "Vertices": [                         
+              {"x": -0.5, "y": -0.3, "z": 0.1},
+              {"x": -0.5, "y": -0.3, "z": -0.1},
+              {"x": -0.5, "y": -0.4, "z": -0.1},
+              {"x": -0.5, "y": -0.4, "z": 0.1}      
+          ],
+          "Color":{"R":128,"G":128,"B":128,"A":255}
+        },
+        {
+          "Nombre": "Cara Lateral Derecho Pata Izquierda",
+          "Tipo": "Cuadrado",
+          "Vertices": [                         
+              {"x": -0.4, "y": -0.3, "z": 0.1},
+              {"x": -0.4, "y": -0.3, "z": -0.1},
+              {"x": -0.4, "y": -0.4, "z": -0.1},
+              {"x": -0.4, "y": -0.4, "z": 0.1}      
+          ],
+          "Color":{"R":128,"G":128,"B":128,"A":255}
+        },
+        {
+          "Nombre": "Cara Lateral Izquierdo Pata Derecha",
+          "Tipo": "Cuadrado",
+          "Vertices": [                         
+              {"x": 0.4, "y": -0.3, "z": 0.1},
+              {"x": 0.4, "y": -0.3, "z": -0.1},
+              {"x": 0.4, "y": -0.4, "z": -0.1},
+              {"x": 0.4, "y": -0.4, "z": 0.1}
+          ],
+          "Color":{"R":128,"G":128,"B":128,"A":255}
+        },
+        {
+          "Nombre": "Cara Lateral Derecho Pata Derecha",
+          "Tipo": "Cuadrado",
+          "Vertices": [                         
+                {"x": 0.5, "y": -0.3, "z": 0.1},
+                {"x": 0.5, "y": -0.3, "z": -0.1},
+                {"x": 0.5, "y": -0.4, "z": -0.1},
+                {"x": 0.5, "y": -0.4, "z": 0.1}
+          ],
+          "Color":{"R":128,"G":128,"B":128,"A":255}
+        },
+        {
+          "Nombre": "Cara Superior Pata Izquierda",
+          "Tipo": "Cuadrado",
+          "Vertices": [                         
+              {"x": -0.5, "y": -0.31, "z": 0.1},
+              {"x": -0.5, "y": -0.31, "z": -0.1},
+              {"x": -0.4, "y": -0.31, "z": -0.1},
+              {"x": -0.4, "y": -0.31, "z": 0.1}
+          ],
+          "Color":{"R":128,"G":128,"B":128,"A":255}
+        },
+        {
+          "Nombre": "Cara Superior Pata Derecha",
+          "Tipo": "Cuadrado",
+          "Vertices": [                         
+              {"x": 0.5, "y": -0.31, "z": 0.1},
+              {"x": 0.5, "y": -0.31, "z": -0.1},
+              {"x": 0.4, "y": -0.31, "z": -0.1},
+              {"x": 0.4, "y": -0.31, "z": 0.1}   
+          ],
+          "Color":{"R":128,"G":128,"B":128,"A":255}
+        },
+        {
+          "Nombre": "Cara Inferior Pata Izquierda",
+          "Tipo": "Cuadrado",
+          "Vertices": [                                   
+              {"x": -0.5, "y": -0.4, "z": 0.1},
+              {"x": -0.5, "y": -0.4, "z": -0.1},
+              {"x": -0.4, "y": -0.4, "z": -0.1},
+              {"x": -0.4, "y": -0.4, "z": 0.1}  
+          ],
+          "Color":{"R":128,"G":128,"B":128,"A":255}
+        },
+        {
+          "Nombre": "Cara Inferior Pata Derecha",
+          "Tipo": "Cuadrado",
+          "Vertices": [                         
+              {"x": 0.5, "y": -0.4, "z": 0.1},
+              {"x": 0.5, "y": -0.4, "z": -0.1},
+              {"x": 0.4, "y": -0.4, "z": -0.1},
+              {"x": 0.4, "y": -0.4, "z": 0.1}
+          ],
+          "Color":{"R":128,"G":128,"B":128,"A":255}
+        }
+      ]
+    },
+    {
+      "Poligonos": [
+        {
+          "Nombre": "Piso",
+          "Tipo": "Cuadrado",
+          "Vertices": [
+            {"x": -1.2, "y": -0.415, "z": 0.3},
+            {"x": 1.2, "y": -0.415, "z": 0.3},
+            {"x": 1.2, "y": -0.415, "z": -0.3},
+            {"x": -1.2,"y": -0.415, "z": -0.3}
+          ],
+          "Color": {"R":0,"G":0,"B":255,"A":255}
+        }
+      ]
+    },
+  ]
+}
