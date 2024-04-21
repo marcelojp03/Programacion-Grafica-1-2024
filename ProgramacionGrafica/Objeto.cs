@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json;
+using OpenTK;
 using OpenTK.Graphics;
+using OpenTK.Graphics.OpenGL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +16,6 @@ namespace ProgramacionGrafica
         public List<Parte> Partes { get; set; }
         //[JsonProperty("Centro")]
         public Punto Centro { get; set; }
-
 
         //[JsonConstructor]
         public Objeto(List<Parte> partes, Punto centro)

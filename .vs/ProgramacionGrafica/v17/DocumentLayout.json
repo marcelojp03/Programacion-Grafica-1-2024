@@ -3,44 +3,52 @@
   "WorkspaceRootPath": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|d:\\programacion\\visualstudio.net\\c#\\opengl\\programaciongrafica\\programaciongrafica\\serialize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\serialize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|d:\\programacion\\visualstudio.net\\c#\\opengl\\programaciongrafica\\programaciongrafica\\jsons\\televisor.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\jsons\\televisor.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|d:\\programacion\\visualstudio.net\\c#\\opengl\\programaciongrafica\\programaciongrafica\\jsons\\parlantes.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\jsons\\parlantes.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|d:\\programacion\\visualstudio.net\\c#\\opengl\\programaciongrafica\\programaciongrafica\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|d:\\programacion\\visualstudio.net\\c#\\opengl\\programaciongrafica\\programaciongrafica\\escenario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\programaciongrafica\\escenario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\escenario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|d:\\programacion\\visualstudio.net\\c#\\opengl\\programaciongrafica\\programaciongrafica\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|d:\\programacion\\visualstudio.net\\c#\\opengl\\programaciongrafica\\programaciongrafica\\poligono.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\poligono.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|d:\\programacion\\visualstudio.net\\c#\\opengl\\programaciongrafica\\programaciongrafica\\parte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\parte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|d:\\programacion\\visualstudio.net\\c#\\opengl\\programaciongrafica\\programaciongrafica\\objeto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\objeto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|d:\\programacion\\visualstudio.net\\c#\\opengl\\programaciongrafica\\programaciongrafica\\punto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\programaciongrafica\\parte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\parte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\programaciongrafica\\color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\programaciongrafica\\punto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\punto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\programaciongrafica\\poligono.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\poligono.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\programaciongrafica\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\programaciongrafica\\jsons\\escritorio.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\jsons\\escritorio.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\programaciongrafica\\jsons\\televisor.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\jsons\\televisor.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\programaciongrafica\\jsons\\parlantes.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\jsons\\parlantes.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\programaciongrafica\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\programaciongrafica\\serialize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2DDC8D9-3467-4B7F-A181-166572064311}|ProgramacionGrafica\\ProgramacionGrafica.csproj|solutionrelative:programaciongrafica\\serialize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,137 +58,157 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "parlantes.json",
-              "DocumentMoniker": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\jsons\\parlantes.json",
-              "RelativeDocumentMoniker": "ProgramacionGrafica\\jsons\\parlantes.json",
-              "ToolTip": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\jsons\\parlantes.json",
-              "RelativeToolTip": "ProgramacionGrafica\\jsons\\parlantes.json",
-              "ViewState": "AQIAALQAAAAAAAAAAAAAAMAAAAAFAAAA",
+              "DocumentIndex": 7,
+              "Title": "escritorio.json",
+              "DocumentMoniker": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\jsons\\escritorio.json",
+              "RelativeDocumentMoniker": "ProgramacionGrafica\\jsons\\escritorio.json",
+              "ToolTip": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\jsons\\escritorio.json",
+              "RelativeToolTip": "ProgramacionGrafica\\jsons\\escritorio.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-15T16:13:33.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-20T13:24:22.57Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "televisor.json",
               "DocumentMoniker": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\jsons\\televisor.json",
               "RelativeDocumentMoniker": "ProgramacionGrafica\\jsons\\televisor.json",
               "ToolTip": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\jsons\\televisor.json",
               "RelativeToolTip": "ProgramacionGrafica\\jsons\\televisor.json",
-              "ViewState": "AQIAALwAAAAAAAAAAIAwwOoAAAAvAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHcAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-14T21:24:20.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-20T13:21:15.224Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
+              "Title": "parlantes.json",
+              "DocumentMoniker": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\jsons\\parlantes.json",
+              "RelativeDocumentMoniker": "ProgramacionGrafica\\jsons\\parlantes.json",
+              "ToolTip": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\jsons\\parlantes.json",
+              "RelativeToolTip": "ProgramacionGrafica\\jsons\\parlantes.json",
+              "ViewState": "AQIAAMsAAAAAAAAAAAAAwPIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-15T16:13:33.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Serialize.cs",
               "DocumentMoniker": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\Serialize.cs",
               "RelativeDocumentMoniker": "ProgramacionGrafica\\Serialize.cs",
               "ToolTip": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\Serialize.cs",
               "RelativeToolTip": "ProgramacionGrafica\\Serialize.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAASwBwAAAAqAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwBEAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T21:55:21.251Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-13T21:55:21.251Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "Punto.cs",
               "DocumentMoniker": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\Punto.cs",
               "RelativeDocumentMoniker": "ProgramacionGrafica\\Punto.cs",
               "ToolTip": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\Punto.cs",
               "RelativeToolTip": "ProgramacionGrafica\\Punto.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAWAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-13T19:22:28.746Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
+              "Title": "Color.cs",
+              "DocumentMoniker": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\Color.cs",
+              "RelativeDocumentMoniker": "ProgramacionGrafica\\Color.cs",
+              "ToolTip": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\Color.cs",
+              "RelativeToolTip": "ProgramacionGrafica\\Color.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T22:12:11.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Poligono.cs",
               "DocumentMoniker": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\Poligono.cs",
               "RelativeDocumentMoniker": "ProgramacionGrafica\\Poligono.cs",
               "ToolTip": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\Poligono.cs",
               "RelativeToolTip": "ProgramacionGrafica\\Poligono.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAIAwwBwAAAAJAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAD8AAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-14T02:14:13.409Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Parte.cs",
               "DocumentMoniker": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\Parte.cs",
               "RelativeDocumentMoniker": "ProgramacionGrafica\\Parte.cs",
               "ToolTip": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\Parte.cs",
               "RelativeToolTip": "ProgramacionGrafica\\Parte.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAArwCAAAAAgAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAABUAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-13T23:02:37.597Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "Objeto.cs",
               "DocumentMoniker": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\Objeto.cs",
               "RelativeDocumentMoniker": "ProgramacionGrafica\\Objeto.cs",
               "ToolTip": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\Objeto.cs",
               "RelativeToolTip": "ProgramacionGrafica\\Objeto.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAASwCIAAAAlAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-13T19:52:53.489Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Escenario.cs",
               "DocumentMoniker": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\Escenario.cs",
               "RelativeDocumentMoniker": "ProgramacionGrafica\\Escenario.cs",
               "ToolTip": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\Escenario.cs",
               "RelativeToolTip": "ProgramacionGrafica\\Escenario.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAAEcAAAANAAAA",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAIwHkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-13T23:03:51.885Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Game.cs",
               "DocumentMoniker": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\Game.cs",
               "RelativeDocumentMoniker": "ProgramacionGrafica\\Game.cs",
               "ToolTip": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\Game.cs",
               "RelativeToolTip": "ProgramacionGrafica\\Game.cs",
-              "ViewState": "AQIAAM0AAAAAAAAAAAAYwNcAAAAQAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAwwE0AAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T17:32:58.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-13T17:32:58.865Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\Program.cs",
               "RelativeDocumentMoniker": "ProgramacionGrafica\\Program.cs",
               "ToolTip": "D:\\Programacion\\VisualStudio.net\\c#\\OpenGL\\ProgramacionGrafica\\ProgramacionGrafica\\Program.cs",
               "RelativeToolTip": "ProgramacionGrafica\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T19:22:28.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-13T19:22:28.314Z"
             }
           ]
         }

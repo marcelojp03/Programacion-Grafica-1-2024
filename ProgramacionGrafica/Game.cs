@@ -23,7 +23,7 @@ namespace ProgramacionGrafica
             //private Vector3 cameraPosition = new Vector3(3, 1, 3); // Posición inicial de la cámara
             //private Vector3 lookAtTarget = Vector3.Zero; // Punto objetivo al que mira la cámara
             private Vector2 lastMousePos; // Almacena la posición del ratón anterior
-            private float sensitivity = 0.2f; // Sensibilidad del ratón para la rotación
+            private float sensitivity = 0.25f; // Sensibilidad del ratón para la rotación
             private Vector3 cameraRotation = Vector3.Zero; // Almacena los ángulos de rotación de la cámara
             private float fov = 45.0f; // Campo de visión inicial de la cámara
             private float minFov = 1.0f; // Minimum allowed field of view
@@ -37,7 +37,7 @@ namespace ProgramacionGrafica
             private Escenario escenario = new Escenario();
 
 
-            public Game(int width = 1280, int height = 768, string title = "TV") : base(width, height, GraphicsMode.Default, title)
+            public Game(int width = 1366, int height = 768, string title = "TV") : base(width, height, GraphicsMode.Default, title)
             {
                 Title = title;
                 Size = new Size(width, height);
@@ -71,8 +71,16 @@ namespace ProgramacionGrafica
                 base.OnLoad(e);
 
                 //this.escenario.CargarObjetos("D://Programacion//VisualStudio.net//c#//OpenGL//ProgramacionGrafica//ProgramacionGrafica//puntos/televisor.json");
-                this.escenario.CargarObjetos("../../jsons/televisor.json");
-                this.escenario.CargarObjetos("../../jsons/parlantes.json");
+                //this.escenario.CargarObjetos("../../jsons/televisor.json");
+                //this.escenario.CargarObjetos("../../jsons/parlantes.json");
+
+
+                //this.escenario.CargarObjetosv3();
+
+                this.escenario.CargarObjetoDeserializado("../../jsons/televisor.json");
+                this.escenario.CargarObjetoDeserializado("../../jsons/parlantes.json");
+                this.escenario.CargarObjetoDeserializado("../../jsons/escritorio.json");
+
                 //WindowState = WindowState.Maximized;
                 //Mouse.SetPosition(900, 500);
                 //Mouse.SetPosition(Width/2,Height/2);
