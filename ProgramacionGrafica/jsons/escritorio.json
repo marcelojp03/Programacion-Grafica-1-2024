@@ -1,10 +1,12 @@
 {
-  "Centro": { "x": 0.0, "y": 0.0, "z": 0.0 },
+  "Nombre": "Escritorio",
   "Partes":[
     {
-     "Poligonos": [
+      "Nombre": "Cuerpo",
+      "Centro": { "x": 0.0, "y": 0.0, "z": 0.0 },
+      "Poligonos": [
         {
-          "Nombre": "Escritorio Cara Frontal",
+          "Nombre": "Cara Frontal",
           "Tipo": "Cuadrado",
           "Vertices": [
             {"x": -1.2, "y": -0.415, "z": 0.3},
@@ -15,7 +17,7 @@
           "Color": {"R":0,"G":0,"B":255,"A":255}
         },    
         {
-          "Nombre": "Escritorio Cara Trasera",
+          "Nombre": "Cara Trasera",
           "Tipo": "Cuadrado",
           "Vertices": [
             {"x": -1.2, "y": -0.415, "z": -0.3},
@@ -26,7 +28,7 @@
           "Color": {"R":0,"G":0,"B":255,"A":255}
         },
         {
-          "Nombre": "Escritorio Cara Superior",
+          "Nombre": "Cara Superior",
           "Tipo": "Cuadrado",
           "Vertices": [
             {"x": -1.2, "y": -0.415, "z": 0.3},
@@ -37,7 +39,7 @@
           "Color": {"R":0,"G":0,"B":255,"A":255}
         },
         {
-          "Nombre": "Escritorio Cara Inferior",
+          "Nombre": "Cara Inferior",
           "Tipo": "Cuadrado",
           "Vertices": [
             {"x": -1.2, "y": -0.715, "z": 0.3},
@@ -48,7 +50,7 @@
           "Color": {"R":0,"G":0,"B":255,"A":255}
         },
         {
-          "Nombre": "Escritorio Cara Lateral Izquierda ",
+          "Nombre": "Cara Lateral Izquierda ",
           "Tipo": "Cuadrado",
           "Vertices": [
             {"x": -1.2, "y": -0.415, "z": 0.3},
@@ -59,7 +61,7 @@
           "Color": {"R":0,"G":0,"B":255,"A":255}
         },
         {
-          "Nombre": "Escritorio Cara Lateral Derecha",
+          "Nombre": "Cara Lateral Derecha",
           "Tipo": "Cuadrado",
           "Vertices": [
             {"x": 1.2, "y": -0.415, "z": 0.3},

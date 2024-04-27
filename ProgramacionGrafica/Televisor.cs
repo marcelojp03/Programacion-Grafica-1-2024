@@ -13,7 +13,6 @@ namespace ProgramacionGrafica
 {
     public class Televisor
     {
-        private float largo, alto, ancho;
         //private Color4 color;
         private Vector3 centro;
 
@@ -21,9 +20,6 @@ namespace ProgramacionGrafica
         public Televisor(Vector3 centro)
         {
             this.centro = centro;
-            //this.largo = largo;
-            //this.alto = alto;
-            //this.ancho = ancho;
         }
 
         public void Dibujar()
@@ -226,14 +222,15 @@ namespace ProgramacionGrafica
             // Dibujar bocina izquierda
             GL.Color4(Color4.White);
             GL.Begin(PrimitiveType.TriangleFan);
-            GL.Vertex3(this.centro.X - 0.75f, this.centro.Y - 0.25f, this.centro.Z + 0.11f); // Punto central
+            GL.Vertex3(0 - 0.75f, this.centro.Y - 0.25f, this.centro.Z + 0.11f); // Punto central
             int c = 0;
             for (int i = 0; i <= 360; i += 10) // Dibujar un círculo de puntos
             {
                 double angle = Math.PI * i / 180.0;
+                //Console.WriteLine("angle " + angle.ToString());
                 
-                //Console.WriteLine(c++.ToString()+": "+(this.centro.X - 0.75f + (float)Math.Cos(angle) * 0.1f).ToString()+","+(this.centro.Y - 0.25f + (float)Math.Sin(angle) * 0.1f).ToString()+","+(this.centro.Z + 0.11f).ToString());
-                GL.Vertex3(this.centro.X - 0.75f + (float)Math.Cos(angle) * 0.1f, this.centro.Y - 0.25f + (float)Math.Sin(angle) * 0.1f, this.centro.Z + 0.11f);
+                //Console.WriteLine(c++.ToString()+": "+(0 - 0.75f + (float)Math.Cos(angle) * 0.1f).ToString()+","+(this.centro.Y - 0.25f + (float)Math.Sin(angle) * 0.1f).ToString()+","+(this.centro.Z + 0.11f).ToString());
+                GL.Vertex3(0 - 0.75f + (float)Math.Cos(angle) * 0.1f, this.centro.Y - 0.25f + (float)Math.Sin(angle) * 0.1f, this.centro.Z + 0.11f);
             }
             GL.End();
 
@@ -282,8 +279,8 @@ namespace ProgramacionGrafica
             for (int i = 0; i <= 360; i += 10) // Dibujar un círculo de puntos
             {
                 double angle = Math.PI * i / 180.0;
-                //Console.WriteLine(c++.ToString() + ": " + (this.centro.X + 0.75f + (float)Math.Cos(angle) * 0.1f).ToString() + "," + (this.centro.Y - 0.25f + (float)Math.Sin(angle) * 0.1f).ToString() + "," + (this.centro.Z + 0.11f).ToString());
-                GL.Vertex3(this.centro.X + 0.75f + (float)Math.Cos(angle) * 0.1f, this.centro.Y - 0.25f + (float)Math.Sin(angle) * 0.1f, this.centro.Z + 0.11f);
+                //Console.WriteLine(c++.ToString() + ": " + (0 + 0.75f + (float)Math.Cos(angle) * 0.1f).ToString() + "," + (this.centro.Y - 0.25f + (float)Math.Sin(angle) * 0.1f).ToString() + "," + (this.centro.Z + 0.11f).ToString());
+                GL.Vertex3(0+ 0.75f + (float)Math.Cos(angle) * 0.1f, this.centro.Y - 0.25f + (float)Math.Sin(angle) * 0.1f, this.centro.Z + 0.11f);
             }
             GL.End();
         }

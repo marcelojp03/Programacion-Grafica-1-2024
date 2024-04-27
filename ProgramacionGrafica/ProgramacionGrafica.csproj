@@ -53,6 +53,7 @@
     <Compile Include="Color.cs" />
     <Compile Include="Escenario.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="Menu.cs" />
     <Compile Include="Parte.cs" />
     <Compile Include="Objeto.cs" />
     <Compile Include="Poligono.cs" />

@@ -8,6 +8,8 @@ using System.Net.Http.Headers;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
+using OpenTK;
 
 namespace ProgramacionGrafica
 {
@@ -83,8 +85,8 @@ namespace ProgramacionGrafica
                 Objeto obj = Serialize.DeserializeObject<Objeto>(fileName);
                 this.AgregarObjeto(obj);
                 
-                Console.WriteLine("Archivo json deserializado " + fileName);
-           
+                //Console.WriteLine("Archivo json deserializado " + fileName);
+                //this.rotarObjeto2();
             }
             catch (Exception ex)
             {
@@ -107,8 +109,8 @@ namespace ProgramacionGrafica
                 {
 
                     string result = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine("Respuesta API FLASK=========================================================================");
-                    Console.WriteLine(result);
+                    //Console.WriteLine("Respuesta API FLASK=========================================================================");
+                    //Console.WriteLine(result);
                     List<Objeto> objetosAPI = JsonConvert.DeserializeObject<List<Objeto>>(result);
                     foreach (var obj in objetosAPI)
                     {
@@ -128,10 +130,45 @@ namespace ProgramacionGrafica
             }
 
         }
-        public void rotarObjeto()
+        public void rotarObjeto2(float angle)
         {
-            Objeto obj1 = this.Objetos[0];
-            //obj1.Rotate(45.0f, 30.0f, 60.0f);
+            Objeto obj = this.Objetos[0];
+            obj.Rotate2(0.01f);
+
+        }
+        public void rotarObjeto(Objeto obj,float angle)
+        {
+            //Objeto obj = this.Objetos[0];
+            //Objeto obj2 = this.Objetos[1];
+            ////obj.Rotate2(angle);
+            //Parte part = obj.Partes[2];
+            //Parte part2= obj2.Partes[1];
+            //part2.Rotate2(0.05f);
+            //part.Rotate2(angle);
+
+    
+             obj.Rotate2(angle);
+
+        }
+
+        public void rotarParteObjeto(Objeto obj, Parte part, float angle)
+        {
+           
+        }
+
+        public Objeto GetObjectByName(string name)
+        {
+            return this.Objetos.FirstOrDefault(obj => obj.Nombre == name);
+        }
+
+        public Parte GetParteByName(Objeto obj, string parteName)
+        {
+            if (obj == null)
+            {
+                return null;
+            }
+
+            return obj.Partes.FirstOrDefault(parte => parte.Nombre == parteName);
         }
         public void DibujarObjetos() 
         {
