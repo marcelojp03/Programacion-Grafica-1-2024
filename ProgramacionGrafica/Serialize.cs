@@ -12,24 +12,47 @@ namespace ProgramacionGrafica
     public class Serialize
     {
 
-        public static void SerializeObject<T>(T obj, string fileName)
+        public static void SerializeObject<T>(T obj, string filePath)
         {
-            string json = JsonConvert.SerializeObject(obj, Formatting.Indented);
-            File.WriteAllText(fileName, json);
+            try
+            {
+                if (File.Exists(filePath))
+                {
+                    string json = JsonConvert.SerializeObject(obj, Formatting.Indented);
+                    File.WriteAllText(filePath, json);
+                }
+                else
+                {
+                    Console.WriteLine("El archivo ya existe");
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
         }
 
-        public static T DeserializeObject<T>(string fileName)
+        public static T DeserializeObject<T>(string filePath)
         {
-            if (File.Exists(fileName))
+            try
             {
-                string json = File.ReadAllText(fileName);
-               // Console.WriteLine("Archivo formato string "+json);
-                T deserializedObject = JsonConvert.DeserializeObject<T>(json); //Deserializa un objeto desde un string Json
-                //Console.WriteLine("Archivo serialized "+deserializedObject);
-                return deserializedObject;
+                if (File.Exists(filePath))
+                {
+                    string json = File.ReadAllText(filePath);
+                    // Console.WriteLine("Archivo formato string "+json);
+                    T deserializedObject = JsonConvert.DeserializeObject<T>(json); //Deserializa un objeto desde un string Json
+                    //Console.WriteLine("Archivo serialized "+deserializedObject);
+                    return deserializedObject;
+                }
+                
             }
-
+            catch(Exception ex) 
+            {
+                Console.WriteLine(ex.Message);
+            }
             return default(T);
+
         }
 
     }

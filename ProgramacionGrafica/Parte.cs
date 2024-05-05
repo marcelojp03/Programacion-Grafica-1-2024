@@ -33,27 +33,39 @@ namespace ProgramacionGrafica
             this.Poligonos.Add(poligono);
         }
 
-        public void DibujarPoligonos()
+        public void DibujarPoligonos(Punto centroObjeto)
         {
             foreach (var poligono in this.Poligonos)
             {
-                poligono.Dibujar(this.Centro);
+                poligono.Dibujar(new Punto(centroObjeto.x + this.Centro.x, centroObjeto.y + this.Centro.y, centroObjeto.z + this.Centro.z));
             }
         }
-        public void Rotate(float angle)
-        {
-            foreach (var poligono in Poligonos)
-            {
-                poligono.Rotate(angle);
-            }
-        }
-        public void Rotate2(float angle)
+
+        public void RotateY(float angle)
         {
             foreach (var poligono in this.Poligonos)
             {
-                poligono.Rotate2(angle);
+                poligono.RotateY(angle);
             }
         }
+
+        public void RotateX(float angle)
+        {
+            foreach (var poligono in this.Poligonos)
+            {
+                poligono.RotateX(angle);
+            }
+        }
+
+        public void RotateZ (float angle)
+        {
+            foreach (var poligono in this.Poligonos)
+            {
+                poligono.RotateZ(angle);
+            }
+        }
+
+
         public void Scale(float sx, float sy, float sz)
         {
             foreach (var poligono in this.Poligonos)

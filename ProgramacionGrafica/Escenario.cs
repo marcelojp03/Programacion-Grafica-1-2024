@@ -16,7 +16,6 @@ namespace ProgramacionGrafica
     public class Escenario
     {
         public List<Objeto> Objetos;
-        //public List<Objeto> ObjetosList;
 
         public Escenario()
         {
@@ -130,30 +129,50 @@ namespace ProgramacionGrafica
             }
 
         }
-        public void rotarObjeto2(float angle)
+
+        //public void rotarObjeto(Objeto obj,float angle)
+        //{
+        //     obj.Rotate(angle);
+        //}
+         
+        public void rotarEscenarioY(float angle)
         {
-            Objeto obj = this.Objetos[0];
-            obj.Rotate2(0.01f);
-
-        }
-        public void rotarObjeto(Objeto obj,float angle)
-        {
-            //Objeto obj = this.Objetos[0];
-            //Objeto obj2 = this.Objetos[1];
-            ////obj.Rotate2(angle);
-            //Parte part = obj.Partes[2];
-            //Parte part2= obj2.Partes[1];
-            //part2.Rotate2(0.05f);
-            //part.Rotate2(angle);
-
-    
-             obj.Rotate2(angle);
-
+            foreach(var objeto in this.Objetos)
+            {
+                objeto.RotateY(angle);
+            }
         }
 
-        public void rotarParteObjeto(Objeto obj, Parte part, float angle)
+        public void rotarEscenarioX(float angle)
         {
-           
+            foreach (var objeto in this.Objetos)
+            {
+                objeto.RotateX(angle);
+            }
+        }
+
+        public void rotarEscenarioZ(float angle)
+        {
+            foreach (var objeto in this.Objetos)
+            {
+                objeto.RotateZ(angle);
+            }
+        }
+
+        public void trasladarEscenario(float dx, float dy, float dz)
+        {
+            foreach (var objeto in this.Objetos)
+            {
+                objeto.Translate(dx,dy,dz);
+            }
+        }
+
+        public void escalarEscenario(float sx, float sy, float sz)
+        {
+            foreach (var objeto in this.Objetos)
+            {
+                objeto.Scale(sx, sy, sz);
+            }
         }
 
         public Objeto GetObjectByName(string name)

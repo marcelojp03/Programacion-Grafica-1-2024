@@ -18,13 +18,14 @@ namespace ProgramacionGrafica
             escenario.CargarObjetoDeserializado("../../jsons/televisor.json");
             escenario.CargarObjetoDeserializado("../../jsons/parlantes.json");
             escenario.CargarObjetoDeserializado("../../jsons/escritorio.json");
-            using (Game game = new Game(escenario))
-            {
-                game.Run();
+            //using (Game game = new Game(escenario))
+            //{
+            //    game.Run();
 
-            }
-            //Menu menu = new Menu();
-            //menu.Show();
+            //}
+
+            Menu menu = new Menu();
+            menu.Show();
         }
 
     }

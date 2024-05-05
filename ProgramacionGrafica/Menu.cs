@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenTK;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace ProgramacionGrafica
     {
         private Escenario escenario = new Escenario();
         private Game game;
+        private Objeto objetoSeleccionado;
+        private Parte parteSeleccionada;
         public Menu()
         {
             //this.escenario = escenario;
@@ -35,7 +38,8 @@ namespace ProgramacionGrafica
                 Console.WriteLine("1. Rotar");
                 Console.WriteLine("2. Escalar");
                 Console.WriteLine("3. Trasladar");
-                Console.WriteLine("4. Salir");
+                Console.WriteLine("4. Mostrar escenario");
+                Console.WriteLine("5. Salir");
                 Console.WriteLine("----------");
 
                 string choice = Console.ReadLine();
@@ -50,12 +54,17 @@ namespace ProgramacionGrafica
                             //this.game.Run();
                             break;
                         case 2:
-                            //PerformScaling();
+                            PerformScaling();
+                            //this.game.Run();
                             break;
                         case 3:
-                            //PerformTranslation();
+                            PerformTranslation();
+                            //this.game.Run();
                             break;
                         case 4:
+                            this.game.Run();
+                            break;
+                        case 5:
                             Environment.Exit(0);
                             break;
                         default:
@@ -67,7 +76,6 @@ namespace ProgramacionGrafica
                 {
                     Console.WriteLine("Entrada inválida. Ingrese un número.");
                 }
-                //this.game = null;
                 Console.WriteLine("Presione cualquier tecla para continuar...");
                 Console.ReadKey(true);
             }
@@ -77,9 +85,37 @@ namespace ProgramacionGrafica
         {
             Console.WriteLine("Seleccione el objeto a rotar:");
             string objectName = this.GetObjectName();
+            if(objectName=="All")
+            {
+                Console.WriteLine("Seleccione el eje de rotación para el escenario:");
+                Console.WriteLine("1. Eje X");
+                Console.WriteLine("2. Eje Y");
+                Console.WriteLine("3. Eje Z");
+
+                string axisChoice = Console.ReadLine();
+
+                switch (axisChoice)
+                {
+                    case "1":
+                        this.game.rotarEscenarioX = true;
+                        break;
+                    case "2":
+                        this.game.rotarEscenarioY = true;
+                        break;
+                    case "3":
+                        this.game.rotarEscenarioZ = true;
+                        break;
+                    default:
+                        Console.WriteLine("Opción inválida para el eje de rotación.");
+                        return;
+                }
+
+                this.game.Run();
+                return;
+            }
             Console.WriteLine("object name: " + objectName);
             this.game.objetoSeleccionado = this.escenario.GetObjectByName(objectName);
-            //Console.WriteLine(this.objetoSeleccionado.Nombre);
+
             if (this.game.objetoSeleccionado == null)
             {
                 Console.WriteLine("Objeto no encontrado.");
@@ -94,27 +130,32 @@ namespace ProgramacionGrafica
 
             if (actionChoice == "1")
             {
-                 
-                this.game.rotar = true;
+
+                Console.WriteLine("Seleccione el eje de rotación:");
+                Console.WriteLine("1. Eje X");
+                Console.WriteLine("2. Eje Y");
+                Console.WriteLine("3. Eje Z");
+
+                string axisChoice = Console.ReadLine();
+
+                switch (axisChoice)
+                {
+                    case "1":
+                        this.game.rotarX = true;
+                        break;
+                    case "2":
+                        this.game.rotarY = true;
+                        break;
+                    case "3":
+                        this.game.rotarZ = true;
+                        break;
+                    default:
+                        Console.WriteLine("Opción inválida para el eje de rotación.");
+                        return;
+                }
+
                 this.game.Run();
                 Console.WriteLine("Objeto rotado.");
-
-                //base.Exit();
-                //float angle;
-                //Console.Write("Ingrese el ángulo de rotación (grados): ");
-                //if (float.TryParse(Console.ReadLine(), out angle))
-                //{
-                //    //obj.Rotate2(MathHelper.DegreesToRadians(angle)); // Convert degrees to radians
-                //    //this.escenario.rotarObjeto(obj,angle);
-                //    //this.escenario.rotarObjeto2(angle);
-                //    this.rotar = true;
-                //    this.Run();
-                //    Console.WriteLine("Objeto rotado.");
-                //}
-                //else
-                //{
-                //    Console.WriteLine("Valor inválido para el ángulo.");
-                //}
             }
             else if (actionChoice == "2")
             {
@@ -128,30 +169,182 @@ namespace ProgramacionGrafica
                     Console.WriteLine("Parte no encontrada.");
                     return;
                 }
-                this.game.rotar = true;
+                Console.WriteLine("Seleccione el eje de rotación:");
+                Console.WriteLine("1. Eje X");
+                Console.WriteLine("2. Eje Y");
+                Console.WriteLine("3. Eje Z");
+
+                string axisChoice = Console.ReadLine();
+
+                switch (axisChoice)
+                {
+                    case "1":
+                        this.game.rotarX = true;
+                        break;
+                    case "2":
+                        this.game.rotarY = true;
+                        break;
+                    case "3":
+                        this.game.rotarZ = true;
+                        break;
+                    default:
+                        Console.WriteLine("Opción inválida para el eje de rotación.");
+                        return;
+                }
+
                 this.game.Run();
                 Console.WriteLine("Parte rotada.");
-
-                //float angle;
-                //Console.Write("Ingrese el ángulo de rotación (grados): ");
-                //if (float.TryParse(Console.ReadLine(), out angle))
-                //{
-                //    //this.part.Rotate(MathHelper.DegreesToRadians(angle));
-                //    this.Run();
-                //    Console.WriteLine("Parte rotada.");
-                //}
-                //else
-                //{
-                //    Console.WriteLine("Valor inválido para el ángulo.");
-                //}               
             }
             else
             {
                 Console.WriteLine("Opción inválida.");
             }
+        }
 
-            //Console.WriteLine(this.objetoSeleccionado.Nombre);
+        private void PerformTranslation()
+        {
+            Console.WriteLine("Seleccione el objeto a trasladar:");
+            string objectName = this.GetObjectName();
+            if (objectName == "All")
+            {
+                Console.WriteLine("Ingrese los valores de traslación en x, y, z:");
+                Console.Write("x: ");
+                float tx = float.Parse(Console.ReadLine());
+                Console.Write("y: ");
+                float ty = float.Parse(Console.ReadLine());
+                Console.Write("z: ");
+                float tz = float.Parse(Console.ReadLine());
 
+                this.escenario.trasladarEscenario(tx, ty, tz);
+                this.game.Run();
+                Console.WriteLine("Escenario trasladado.");
+                return;
+            }
+            Console.WriteLine("object name: " + objectName);
+            this.objetoSeleccionado = this.escenario.GetObjectByName(objectName);
+
+            if (this.objetoSeleccionado == null)
+            {
+                Console.WriteLine("Objeto no encontrado.");
+                return;
+            }
+
+
+            Console.WriteLine("Seleccione la acción:");
+            Console.WriteLine("1. Trasladar todo el objeto");
+            Console.WriteLine("2. Trasladar una parte");
+
+            string actionChoice = Console.ReadLine();
+
+            if(actionChoice=="1")
+            {
+                Console.WriteLine("Ingrese los valores de traslación en x, y, z:");
+                Console.Write("x: ");
+                float tx = float.Parse(Console.ReadLine());
+                Console.Write("y: ");
+                float ty = float.Parse(Console.ReadLine());
+                Console.Write("z: ");
+                float tz = float.Parse(Console.ReadLine());
+
+
+                this.objetoSeleccionado.Translate(tx, ty, tz);
+                this.game.Run();
+                Console.WriteLine("Objeto trasladado.");
+            }
+            else if (actionChoice == "2")
+            {
+                Console.WriteLine("Seleccione la parte a rotar:");
+                string parteName = GetParteName(this.objetoSeleccionado);
+
+                this.parteSeleccionada = this.escenario.GetParteByName(this.objetoSeleccionado, parteName);
+
+                if (this.parteSeleccionada == null)
+                {
+                    Console.WriteLine("Parte no encontrada.");
+                    return;
+                }
+                Console.WriteLine("Ingrese los valores de traslación en x, y, z:");
+                Console.Write("x: ");
+                float tx = float.Parse(Console.ReadLine());
+                Console.Write("y: ");
+                float ty = float.Parse(Console.ReadLine());
+                Console.Write("z: ");
+                float tz = float.Parse(Console.ReadLine());
+
+         
+                this.parteSeleccionada.Translate(tx, ty, tz);
+                this.game.Run();
+                Console.WriteLine("Parte trasladada.");
+            }
+            else
+            {
+                Console.WriteLine("Opción inválida.");
+            }
+        }
+
+        private void PerformScaling()
+        {
+            Console.WriteLine("Seleccione el objeto a escalar:");
+            string objectName = this.GetObjectName();
+            if (objectName == "All")
+            {
+                Console.WriteLine("Ingrese el factor de escala para x, y, z:");
+                Console.Write("Factor de escala: ");
+                float scale = float.Parse(Console.ReadLine());
+                this.escenario.escalarEscenario(scale, scale, scale);
+                this.game.Run();
+                Console.WriteLine("Escenario escalado.");
+                return;
+            }
+            Console.WriteLine("object name: " + objectName);
+            this.objetoSeleccionado = this.escenario.GetObjectByName(objectName);
+
+            if (this.objetoSeleccionado == null)
+            {
+                Console.WriteLine("Objeto no encontrado.");
+                return;
+            }
+
+            Console.WriteLine("Seleccione la acción:");
+            Console.WriteLine("1. Escalar todo el objeto");
+            Console.WriteLine("2. Escalar una parte");
+
+            string actionChoice = Console.ReadLine();
+
+            if (actionChoice == "1")
+            {
+                Console.WriteLine("Ingrese el factor de escala para x, y, z:");
+                Console.Write("Factor de escala: ");
+                float scale = float.Parse(Console.ReadLine());
+
+                this.objetoSeleccionado.Scale(scale, scale, scale);
+                this.game.Run();
+                Console.WriteLine("Objeto escalado.");
+            }
+            else if (actionChoice == "2")
+            {
+                Console.WriteLine("Seleccione la parte a escalar:");
+                string parteName = GetParteName(this.objetoSeleccionado);
+
+                this.parteSeleccionada = this.escenario.GetParteByName(this.objetoSeleccionado, parteName);
+
+                if (this.parteSeleccionada == null)
+                {
+                    Console.WriteLine("Parte no encontrada.");
+                    return;
+                }
+                Console.WriteLine("Ingrese el factor de escala para x, y, z:");
+                Console.Write("Factor de escala: ");
+                float scale = float.Parse(Console.ReadLine());
+
+                this.parteSeleccionada.Scale(scale, scale, scale);
+                this.game.Run();
+                Console.WriteLine("Parte escalada.");
+            }
+            else
+            {
+                Console.WriteLine("Opción inválida.");
+            }
         }
 
         private string GetObjectName()
@@ -163,6 +356,7 @@ namespace ProgramacionGrafica
                 Console.WriteLine($"{index}. {obj.Nombre}");
                 index++;
             }
+            Console.WriteLine($"{index}. Rotar todo el escenario");
 
             Console.Write("Ingrese el número del objeto: ");
             string choice = Console.ReadLine();
@@ -171,6 +365,10 @@ namespace ProgramacionGrafica
             if (int.TryParse(choice, out selection) && selection > 0 && selection <= escenario.Objetos.Count)
             {
                 return escenario.Objetos[selection - 1].Nombre;
+            }
+            else if(selection>0 && selection== escenario.Objetos.Count+1)
+            {
+                return "All";
             }
 
             return null;
@@ -186,7 +384,7 @@ namespace ProgramacionGrafica
                 index++;
             }
 
-            Console.WriteLine($"{index}. Todo el objeto");
+            //Console.WriteLine($"{index}. Todo el objeto");
 
             Console.Write("Ingrese el número de la parte (o todo el objeto): ");
             string choice = Console.ReadLine();
@@ -198,10 +396,10 @@ namespace ProgramacionGrafica
                 {
                     return obj.Partes[selection - 1].Nombre;
                 }
-                else if (selection == obj.Partes.Count + 1)
-                {
-                    return null; // Selects entire object (no part name)
-                }
+                //else if (selection == obj.Partes.Count + 1)
+                //{
+                //    return null; // Selects entire object (no part name)
+                //}
             }
 
             return null;

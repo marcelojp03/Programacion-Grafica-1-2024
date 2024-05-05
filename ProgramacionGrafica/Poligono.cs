@@ -70,20 +70,31 @@ namespace ProgramacionGrafica
                 //GL.PopMatrix();
             }
         }
-        public void Rotate(float angle)
+        public void RotateY(float angle)
         {
-            for (int i = 0; i < Vertices.Count; i++)
+            // Apply rotation to each vertex
+            for (int i = 0; i < this.Vertices.Count; i++)
             {
-                Vertices[i] = RotateVertexY(Vertices[i], angle);
+                this.Vertices[i] = this.Vertices[i].RotateY(angle);
             }
         }
 
-        public void Rotate2(float angle)
+
+        public void RotateX(float angle)
         {
             // Apply rotation to each vertex
-            for (int i = 0; i < Vertices.Count; i++)
+            for (int i = 0; i < this.Vertices.Count; i++)
             {
-                Vertices[i] = Vertices[i].RotateY(angle);
+                this.Vertices[i] = this.Vertices[i].RotateX(angle);
+            }
+        }
+
+        public void RotateZ(float angle)
+        {
+            // Apply rotation to each vertex
+            for (int i = 0; i < this.Vertices.Count; i++)
+            {
+                this.Vertices[i] = this.Vertices[i].RotateZ(angle);
             }
         }
 
@@ -103,15 +114,6 @@ namespace ProgramacionGrafica
             {
                 Vertices[i] = Vertices[i].Translate(dx, dy, dz);
             }
-        }
-
-        private Punto RotateVertexY(Punto vertex, float angle)
-        {
-            float cosA = (float)Math.Cos(angle);
-            float sinA = (float)Math.Sin(angle);
-            float x = vertex.x * cosA - vertex.z * sinA;
-            float z = vertex.x * sinA + vertex.z * cosA;
-            return new Punto(x, vertex.y, z);
         }
     }
 }

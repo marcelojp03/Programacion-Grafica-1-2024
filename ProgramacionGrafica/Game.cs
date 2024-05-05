@@ -33,8 +33,8 @@ namespace ProgramacionGrafica
         public Parte parteSeleccionada;
 
         //private bool running = false;
-        public bool rotar = false, escalar = false, trasladar = false;
-
+        public bool rotarY = false, rotarX = false, rotarZ = false;
+        public bool rotarEscenarioY = false, rotarEscenarioX = false, rotarEscenarioZ = false;
 
         public Game(Escenario escenario,int width = 1366, int height = 768, string title = "TV") : base(width, height, GraphicsMode.Default, title)
         {
@@ -43,191 +43,6 @@ namespace ProgramacionGrafica
             this.escenario = escenario;
            
         }
-
-
-        public void Menu()
-        {
-            while (true)
-            {
-                Console.Clear();
-                Console.WriteLine("Menu:");
-                Console.WriteLine("1. Rotar");
-                Console.WriteLine("2. Escalar");
-                Console.WriteLine("3. Trasladar");
-                Console.WriteLine("4. Salir");
-                Console.WriteLine("----------");
-
-                string choice = Console.ReadLine();
-
-                int selection;
-                if (int.TryParse(choice, out selection))
-                {
-                    switch (selection)
-                    {
-                        case 1:
-                            PerformRotation();                    
-                            break;
-                        case 2:
-                            //PerformScaling();
-                            break;
-                        case 3:
-                            //PerformTranslation();
-                            break;
-                        case 4:
-                            Environment.Exit(0);
-                            break;
-                        default:
-                            Console.WriteLine("Opción inválida.");
-                            break;
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Entrada inválida. Ingrese un número.");
-                }
-                
-                Console.WriteLine(base.ToString());
-                Console.WriteLine("Presione cualquier tecla para continuar...");
-                Console.ReadKey(true);
-                    
-            }
-        }
-
-        private void PerformRotation()
-        {
-            Console.WriteLine("Seleccione el objeto a rotar:");
-            string objectName = GetObjectName();
-            Console.WriteLine("object name: "+objectName);
-            this.objetoSeleccionado = escenario.GetObjectByName(objectName);
-            //Console.WriteLine(this.objetoSeleccionado.Nombre);
-            if (this.objetoSeleccionado == null)
-            {
-                Console.WriteLine("Objeto no encontrado.");
-                return;
-            }
-
-            Console.WriteLine("Seleccione la acción:");
-            Console.WriteLine("1. Rotar todo el objeto");
-            Console.WriteLine("2. Seleccionar una parte");
-
-            string actionChoice = Console.ReadLine();
-
-            if (actionChoice == "1")
-            {
-                
-                this.rotar = true;
-                this.Run();
-                Console.WriteLine("Objeto rotado.");
-                
-                //base.Exit();
-                //float angle;
-                //Console.Write("Ingrese el ángulo de rotación (grados): ");
-                //if (float.TryParse(Console.ReadLine(), out angle))
-                //{
-                //    //obj.Rotate2(MathHelper.DegreesToRadians(angle)); // Convert degrees to radians
-                //    //this.escenario.rotarObjeto(obj,angle);
-                //    //this.escenario.rotarObjeto2(angle);
-                //    this.rotar = true;
-                //    this.Run();
-                //    Console.WriteLine("Objeto rotado.");
-                //}
-                //else
-                //{
-                //    Console.WriteLine("Valor inválido para el ángulo.");
-                //}
-            }
-            else if (actionChoice == "2")
-            {
-                Console.WriteLine("Seleccione la parte a rotar:");
-                string parteName = GetParteName(this.objetoSeleccionado);
-
-                this.parteSeleccionada = this.escenario.GetParteByName(this.objetoSeleccionado, parteName);
-
-                if (this.parteSeleccionada == null)
-                {
-                    Console.WriteLine("Parte no encontrada.");
-                    return;
-                }
-                this.rotar = true;
-                Run();
-                Console.WriteLine("Parte rotada.");
-          
-                //float angle;
-                //Console.Write("Ingrese el ángulo de rotación (grados): ");
-                //if (float.TryParse(Console.ReadLine(), out angle))
-                //{
-                //    //this.part.Rotate(MathHelper.DegreesToRadians(angle));
-                //    this.Run();
-                //    Console.WriteLine("Parte rotada.");
-                //}
-                //else
-                //{
-                //    Console.WriteLine("Valor inválido para el ángulo.");
-                //}               
-            }
-            else
-            {
-                Console.WriteLine("Opción inválida.");
-            }
-            
-            //Console.WriteLine(this.objetoSeleccionado.Nombre);
-
-        }
-
-        private string GetObjectName()
-        {
-            Console.WriteLine("Lista de objetos:");
-            int index = 1;
-            foreach (var obj in this.escenario.Objetos)
-            {
-                Console.WriteLine($"{index}. {obj.Nombre}");
-                index++;
-            }
-
-            Console.Write("Ingrese el número del objeto: ");
-            string choice = Console.ReadLine();
-
-            int selection;
-            if (int.TryParse(choice, out selection) && selection > 0 && selection <= escenario.Objetos.Count)
-            {
-                return escenario.Objetos[selection - 1].Nombre;
-            }
-
-            return null;
-        }
-
-        private string GetParteName(Objeto obj)
-        {
-            Console.WriteLine("Lista de partes del objeto:");
-            int index = 1;
-            foreach (var parte in obj.Partes)
-            {
-                Console.WriteLine($"{index}. {parte.Nombre}");
-                index++;
-            }
-
-            Console.WriteLine($"{index}. Todo el objeto");
-
-            Console.Write("Ingrese el número de la parte (o todo el objeto): ");
-            string choice = Console.ReadLine();
-
-            int selection;
-            if (int.TryParse(choice, out selection))
-            {
-                if (selection > 0 && selection <= obj.Partes.Count)
-                {
-                    return obj.Partes[selection - 1].Nombre;
-                }
-                else if (selection == obj.Partes.Count + 1)
-                {
-                    return null; // Selects entire object (no part name)
-                }
-            }
-
-            return null;
-        }
-
-
         protected override void OnResize(EventArgs e)
         {
             GL.Viewport(0, 0, Width, Height);
@@ -290,42 +105,71 @@ namespace ProgramacionGrafica
         {
             GL.BindBuffer(BufferTarget.ArrayBuffer, 0);
             GL.DeleteBuffer(this.vertexBufferObject);
-            this.rotar = false;
-            this.escalar = false;
-            this.trasladar = false;           
+            //this.rotar = false;
+                     
             base.OnUnload(e);
             
         }
         protected override void OnUpdateFrame(FrameEventArgs e)
         {
             base.OnUpdateFrame(e);
-            if(rotar)
+            if(rotarY)
             {
                 if(this.objetoSeleccionado!=null)
                 {
-                    //this.escenario.rotarObjeto(obj,(float)e.Time);
                     if (this.parteSeleccionada != null)
                     {
-                        this.parteSeleccionada.Rotate2((float)e.Time);
+                        this.parteSeleccionada.RotateY((float)e.Time);
                     }
                     else
                     {
-                        this.objetoSeleccionado.Rotate2((float)e.Time);
+                        this.objetoSeleccionado.RotateY((float)e.Time);
                     }
                 }
                     
             }
-            else if(escalar)
+            if (rotarX)
             {
+                if (this.objetoSeleccionado != null)
+                {
+                    if (this.parteSeleccionada != null)
+                    {
+                        this.parteSeleccionada.RotateX((float)e.Time);
+                    }
+                    else
+                    {
+                        this.objetoSeleccionado.RotateX((float)e.Time);
+                    }
+                }
 
             }
-            else if(trasladar)
+            if (rotarZ)
             {
+                if (this.objetoSeleccionado != null)
+                {
+                    if (this.parteSeleccionada != null)
+                    {
+                        this.parteSeleccionada.RotateZ((float)e.Time);
+                    }
+                    else
+                    {
+                        this.objetoSeleccionado.RotateZ((float)e.Time);
+                    }
+                }
 
             }
-           
-            //this.escenario.rotarObjeto((float)e.Time);
-            //this.escenario.rotarObjeto2((float)e.Time);
+            if(this.rotarEscenarioY)
+            {
+                this.escenario.rotarEscenarioY((float)e.Time);
+            }
+            if (this.rotarEscenarioX)
+            {
+                this.escenario.rotarEscenarioX((float)e.Time);
+            }
+            if (this.rotarEscenarioZ)
+            {
+                this.escenario.rotarEscenarioZ((float)e.Time);
+            }
 
         }
 
@@ -340,8 +184,6 @@ namespace ProgramacionGrafica
             }
            
         }
-
-
         protected override void OnMouseMove(MouseMoveEventArgs e)
         {
             base.OnMouseMove(e);
@@ -389,7 +231,7 @@ namespace ProgramacionGrafica
 
 
             // Definir una matriz de vista para simular una cámara que observa la TV desde una posición y orientación específicas
-            Matrix4 view = Matrix4.LookAt(new Vector3(0, 1,3), Vector3.Zero, Vector3.UnitY);
+            Matrix4 view = Matrix4.LookAt(new Vector3(0, 1,4), Vector3.Zero, Vector3.UnitY);
 
 
             // Aplica la rotación de la cámara a la matriz de vista

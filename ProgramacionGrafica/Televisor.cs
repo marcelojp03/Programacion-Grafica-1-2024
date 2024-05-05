@@ -15,12 +15,26 @@ namespace ProgramacionGrafica
     {
         //private Color4 color;
         private Vector3 centro;
+        public Vector3 Centro { get; set; }
+        public string Nombre { get; set; } = "Televisor";
+        public List<Poligono> Partes { get; set; } = new List<Poligono>();
 
         //public Televisor(Vector3 centro, float largo, float alto, float ancho)
         public Televisor(Vector3 centro)
         {
             this.centro = centro;
         }
+
+        //public Dictionary<string, object> ToJson()
+        //{
+        //    var partesJson = Partes.Select(p => p.ToJson()).ToList();
+        //    return new Dictionary<string, object>()
+        //    {
+        //        { "Nombre", Nombre },
+        //        { "Centro", new Dictionary<string, object>() { { "X", Centro.X }, { "Y", Centro.Y }, { "Z", Centro.Z } } },
+        //        { "Partes", partesJson }
+        //    };
+        //}
 
         public void Dibujar()
         {
