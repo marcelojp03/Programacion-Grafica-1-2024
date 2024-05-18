@@ -12,6 +12,8 @@ using ProgramacionGrafica;
 using System.IO;
 using System.Threading;
 using System.ComponentModel;
+using System.Net.Http;
+using Newtonsoft.Json;
 
 
 namespace ProgramacionGrafica
@@ -20,7 +22,7 @@ namespace ProgramacionGrafica
     public class Game : GameWindow
     {
         int vertexBufferObject;
-
+        private bool isDragging = false;
         private Vector2 lastMousePos; // Almacena la posición del ratón anterior
         private float sensitivity = 0.25f; // Sensibilidad del ratón para la rotación
         private Vector3 cameraRotation = Vector3.Zero; // Almacena los ángulos de rotación de la cámara
@@ -32,16 +34,44 @@ namespace ProgramacionGrafica
         public Objeto objetoSeleccionado;
         public Parte parteSeleccionada;
 
+
+        bool startCount = false;
+        float time = 0.0f;
+        bool bajadaLapiz = true;
+        bool caidaParlante = true;
+
         //private bool running = false;
         public bool rotarY = false, rotarX = false, rotarZ = false;
         public bool rotarEscenarioY = false, rotarEscenarioX = false, rotarEscenarioZ = false;
 
-        public Game(Escenario escenario,int width = 1366, int height = 768, string title = "TV") : base(width, height, GraphicsMode.Default, title)
+        public Api api;
+        bool habilitarAPI = false;
+
+        public Game(Escenario escenario, int width = 1366, int height = 768, string title = "TV") : base(width, height, GraphicsMode.Default, title)
         {
             Title = title;
             Size = new Size(width, height);
             this.escenario = escenario;
-           
+            this.api = new Api(this.escenario);
+
+        }
+
+
+        public void StartAnimation()
+        {
+            this.startCount = true;
+        }
+        public void cargarLapiz()
+        {
+            this.escenario.CargarObjetoDeserializado("../../jsons/lapiz.json");
+        }
+
+        public void CargarObjetos()
+        {
+            this.escenario.CargarObjetoDeserializado("../../jsons/televisor.json");
+            this.escenario.CargarObjetoDeserializado("../../jsons/parlantes.json");
+            this.escenario.CargarObjetoDeserializado("../../jsons/escritorio.json");
+            this.escenario.CargarObjetoDeserializado("../../jsons/lapiz.json");
         }
         protected override void OnResize(EventArgs e)
         {
@@ -99,6 +129,8 @@ namespace ProgramacionGrafica
             //GL.MatrixMode(MatrixMode.Modelview);
             //GL.LoadMatrix(ref view);
 
+            //this.StartAnimation();
+
         }
 
         protected override void OnUnload(EventArgs e)
@@ -106,69 +138,83 @@ namespace ProgramacionGrafica
             GL.BindBuffer(BufferTarget.ArrayBuffer, 0);
             GL.DeleteBuffer(this.vertexBufferObject);
             //this.rotar = false;
-                     
+
             base.OnUnload(e);
-            
+
         }
         protected override void OnUpdateFrame(FrameEventArgs e)
         {
             base.OnUpdateFrame(e);
-            if(rotarY)
-            {
-                if(this.objetoSeleccionado!=null)
-                {
-                    if (this.parteSeleccionada != null)
-                    {
-                        this.parteSeleccionada.RotateY((float)e.Time);
-                    }
-                    else
-                    {
-                        this.objetoSeleccionado.RotateY((float)e.Time);
-                    }
-                }
-                    
-            }
-            if (rotarX)
-            {
-                if (this.objetoSeleccionado != null)
-                {
-                    if (this.parteSeleccionada != null)
-                    {
-                        this.parteSeleccionada.RotateX((float)e.Time);
-                    }
-                    else
-                    {
-                        this.objetoSeleccionado.RotateX((float)e.Time);
-                    }
-                }
+            //if(rotarY)
+            //{
+            //    if(this.objetoSeleccionado!=null)
+            //    {
+            //        if (this.parteSeleccionada != null)
+            //        {
+            //            this.parteSeleccionada.RotateY((float)e.Time);
+            //        }
+            //        else
+            //        {
+            //            this.objetoSeleccionado.RotateY((float)e.Time);
+            //        }
+            //    }
 
-            }
-            if (rotarZ)
-            {
-                if (this.objetoSeleccionado != null)
-                {
-                    if (this.parteSeleccionada != null)
-                    {
-                        this.parteSeleccionada.RotateZ((float)e.Time);
-                    }
-                    else
-                    {
-                        this.objetoSeleccionado.RotateZ((float)e.Time);
-                    }
-                }
+            //}
+            //if (rotarX)
+            //{
+            //    if (this.objetoSeleccionado != null)
+            //    {
+            //        if (this.parteSeleccionada != null)
+            //        {
+            //            this.parteSeleccionada.RotateX((float)e.Time);
+            //        }
+            //        else
+            //        {
+            //            this.objetoSeleccionado.RotateX((float)e.Time);
+            //        }
+            //    }
 
-            }
-            if(this.rotarEscenarioY)
+            //}
+            //if (rotarZ)
+            //{
+            //    if (this.objetoSeleccionado != null)
+            //    {
+            //        if (this.parteSeleccionada != null)
+            //        {
+            //            this.parteSeleccionada.RotateZ((float)e.Time);
+            //        }
+            //        else
+            //        {
+            //            this.objetoSeleccionado.RotateZ((float)e.Time);
+            //        }
+            //    }
+
+            //}
+            //if(this.rotarEscenarioY)
+            //{
+            //    this.escenario.rotarEscenarioY((float)e.Time);
+            //}
+            //if (this.rotarEscenarioX)
+            //{
+            //    this.escenario.rotarEscenarioX((float)e.Time);
+            //}
+            //if (this.rotarEscenarioZ)
+            //{
+            //    this.escenario.rotarEscenarioZ((float)e.Time);
+            //}
+            //this.api.obtenerDatosAPI();
+            if (this.startCount)
             {
-                this.escenario.rotarEscenarioY((float)e.Time);
+                this.time = this.time + (float)e.Time;
+                //this.contadorBajada += (float)e.Time;
+                //this.contadorSubida += (float)e.Time;
+                Console.WriteLine(time);
+                this.Animacion();
             }
-            if (this.rotarEscenarioX)
+
+            if (this.habilitarAPI)
             {
-                this.escenario.rotarEscenarioX((float)e.Time);
-            }
-            if (this.rotarEscenarioZ)
-            {
-                this.escenario.rotarEscenarioZ((float)e.Time);
+                this.api.obtenerDatosAPI();
             }
 
         }
@@ -180,35 +226,71 @@ namespace ProgramacionGrafica
             // Verifica si se presionó la tecla Escape
             if (e.Key == Key.Escape)
             {
-                Exit();            
+                Exit();
             }
-           
+
+            if (e.Key == Key.S)
+            {
+                this.StartAnimation();
+            }
+
+            if (e.Key == Key.C)
+            {
+                this.cargarLapiz();
+            }
+
+            if (e.Key == Key.Z)
+            {
+                this.habilitarAPI = true;
+            }
+            if (e.Key == Key.X)
+            {
+                this.habilitarAPI = false;
+            }
+
         }
+
+        protected override void OnMouseDown(MouseButtonEventArgs e)
+        {
+            base.OnMouseDown(e);
+            this.isDragging = true;
+            this.lastMousePos = new Vector2(e.X, e.Y);
+        }
+
+        protected override void OnMouseUp(MouseButtonEventArgs e)
+        {
+            base.OnMouseUp(e);
+            this.isDragging = false;
+        }
+
         protected override void OnMouseMove(MouseMoveEventArgs e)
         {
             base.OnMouseMove(e);
 
+            if (this.isDragging)
+            {
 
-            // Get the current mouse position in window coordinates
-            Vector2 currentMousePos = new Vector2(e.X, e.Y);
+                // Get the current mouse position in window coordinates
+                Vector2 currentMousePos = new Vector2(e.X, e.Y);
 
-            // Calculate the difference in mouse movement since the last event
-            float deltaX = (float)currentMousePos.X - this.lastMousePos.X;
-            float deltaY = (float)currentMousePos.Y - this.lastMousePos.Y;
+                // Calculate the difference in mouse movement since the last event
+                float deltaX = (float)currentMousePos.X - this.lastMousePos.X;
+                float deltaY = (float)currentMousePos.Y - this.lastMousePos.Y;
 
-            // Update the camera rotation based on mouse movement
-            cameraRotation.X -= deltaY * sensitivity;
-            cameraRotation.Y -= deltaX * sensitivity;
+                // Update the camera rotation based on mouse movement
+                cameraRotation.X -= deltaY * sensitivity;
+                cameraRotation.Y -= deltaX * sensitivity;
 
-            // Clamp the rotation angles to prevent extreme values
-            cameraRotation.X = MathHelper.Clamp(cameraRotation.X, -90.0f, 90.0f);
-            cameraRotation.Y = MathHelper.Clamp(cameraRotation.Y, -180.0f, 180.0f);
+                // Clamp the rotation angles to prevent extreme values
+                cameraRotation.X = MathHelper.Clamp(cameraRotation.X, -90.0f, 90.0f);
+                cameraRotation.Y = MathHelper.Clamp(cameraRotation.Y, -180.0f, 180.0f);
 
-            // Update the last mouse position for the next event
-            this.lastMousePos = currentMousePos;
+                // Update the last mouse position for the next event
+                this.lastMousePos = currentMousePos;
 
-            //this.lastMousePosition=new Vector2(e.X, e.Y);
-            //Console.WriteLine(this.lastMousePosition);
+                //this.lastMousePosition=new Vector2(e.X, e.Y);
+                //Console.WriteLine(this.lastMousePosition);
+            }
         }
 
         protected override void OnMouseWheel(MouseWheelEventArgs e)
@@ -223,20 +305,20 @@ namespace ProgramacionGrafica
 
         protected override void OnRenderFrame(FrameEventArgs args)
         {
-            
-            GL.Clear(ClearBufferMask.ColorBufferBit|ClearBufferMask.DepthBufferBit);
+
+            GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
             GL.BindBuffer(BufferTarget.ArrayBuffer, this.vertexBufferObject);
 
             GL.Enable(EnableCap.DepthTest);
 
 
             // Definir una matriz de vista para simular una cámara que observa la TV desde una posición y orientación específicas
-            Matrix4 view = Matrix4.LookAt(new Vector3(0, 1,4), Vector3.Zero, Vector3.UnitY);
+            Matrix4 view = Matrix4.LookAt(new Vector3(0, 1, 4), Vector3.Zero, Vector3.UnitY);
 
 
             // Aplica la rotación de la cámara a la matriz de vista
-            Matrix4 rotationMatrix = Matrix4.CreateRotationX(MathHelper.DegreesToRadians(cameraRotation.X)) *
-                                        Matrix4.CreateRotationY(MathHelper.DegreesToRadians(cameraRotation.Y));
+            Matrix4 rotationMatrix = Matrix4.CreateRotationX(MathHelper.DegreesToRadians(this.cameraRotation.X)) *
+                                        Matrix4.CreateRotationY(MathHelper.DegreesToRadians(this.cameraRotation.Y));
             view = rotationMatrix * view;
             GL.MatrixMode(MatrixMode.Modelview);
             GL.LoadMatrix(ref view);
@@ -261,9 +343,9 @@ namespace ProgramacionGrafica
             // Dibujar la TV
             //DrawTV();
             //Televisor c1 = new Televisor( new Vector3(0,0,0),0.5f,0.3f,0.2f);
-            Televisor c1 = new Televisor(new Vector3(0.5f,0.3f,0.8f));
-            Televisor c2= new Televisor(new Vector3(-0.75f, 0.0f, 0.0f));
-            Televisor c3 = new Televisor(new Vector3(-0.5f, -0.3f, -0.8f));
+            //Televisor c1 = new Televisor(new Vector3(0.5f,0.3f,0.8f));
+            //Televisor c2= new Televisor(new Vector3(-0.75f, 0.0f, 0.0f));
+            //Televisor c3 = new Televisor(new Vector3(-0.5f, -0.3f, -0.8f));
 
             //c1.Dibujar();
             //c2.Dibujar();
@@ -273,6 +355,10 @@ namespace ProgramacionGrafica
             this.Context.SwapBuffers(); //Renderiza la escena 
 
             base.OnRenderFrame(args);
+
+
+            //api.obtenerDatosAPI();
+
         }
 
         private void DrawTV()
@@ -370,11 +456,70 @@ namespace ProgramacionGrafica
             GL.Vertex3(0.5f, -0.4f, 0.1f);
             GL.Vertex3(0.5f, -0.4f, -0.1f);
             GL.Vertex3(0.4f, -0.4f, -0.1f);
-                
+
             GL.End();
         }
-    }
-        
 
-    
+
+        private void Animacion()
+        {
+            this.objetoSeleccionado = this.escenario.GetObjectByName("Lapiz");
+
+
+            if (Math.Round(this.time, 2) >= 2.00f && this.bajadaLapiz) // cae el lapiz hasta chocar con el parlante
+            {
+                //Console.WriteLine("ANIMACION INICIADA");
+                if (this.bajadaLapiz)
+                {
+                    this.objetoSeleccionado.Translate(0, -0.0124f, 0);
+                    if (Math.Round(this.time, 2) >= 4.00f)
+                    {
+                        this.bajadaLapiz = false;
+
+                    }
+                }
+
+            }
+            else
+            {
+                this.CaidaParlante(); // se cae el parlante
+            }
+
+
+        }
+
+        private void CaidaParlante()
+        {
+            this.objetoSeleccionado = this.escenario.GetObjectByName("Parlantes");
+            this.parteSeleccionada = this.escenario.GetParteByName(this.objetoSeleccionado, "Parlante Izquierdo");
+            if (Math.Round(this.time, 2) > 4.00f && this.caidaParlante) // el parlante se cae del escritorio
+            {
+                this.parteSeleccionada.RotateX(0.015f);
+                this.parteSeleccionada.Translate(0, 0, 0.015f);
+                if (Math.Round(this.time, 2) >= 4.10f && Math.Round(this.time, 2) <= 4.55f) //sigue cayendo el lapiz
+                {
+
+                    this.objetoSeleccionado = this.escenario.GetObjectByName("Lapiz");
+                    this.objetoSeleccionado.Translate(0, -0.011f, 0);
+
+
+                }
+                //if (Math.Round(this.time, 2) >= 4.55f)
+                //{
+                //    this.objetoSeleccionado = this.escenario.GetObjectByName("Lapiz");
+                //    this.objetoSeleccionado.RotateX(0.015f);
+                //    this.objetoSeleccionado.Translate(0, 0, 0.015f);
+                //}
+                if (Math.Round(this.time, 2) >= 5.70f) // se detiene el parlante
+                {
+                    this.caidaParlante = false;
+
+                }
+            }
+        }
+
+    }
+
+
+
 }
